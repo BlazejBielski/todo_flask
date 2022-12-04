@@ -15,7 +15,8 @@ class Todo(db.Model):
     complete = db.Column(db.Boolean)
 
 
-db.create_all()
+with app.app_context():
+    db.create_all()
 
 
 @app.get("/")
