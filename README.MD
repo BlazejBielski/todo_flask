@@ -1,2 +1,9 @@
 # TODO List
 ## with Flask and SQLAlchemy
+
+1. To run application in terminal do:
+    - export FLASK_APP=app.py
+    - export FLASK_ENV=development
+    - flask run
+
+   
