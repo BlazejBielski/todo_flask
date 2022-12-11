@@ -1,0 +1,11 @@
+html {
+    font-family: sans-serif;
+    background: #eee;
+    padding: 1rem; }
+.ui {
+  color: blue;
+  margin: 20px 0;
+}
+.grey {
+    color: grey;
+}

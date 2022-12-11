@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from flask_bootstrap import Bootstrap
+
 
 app = Flask(__name__)
+Bootstrap(app)
 
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
@@ -29,8 +32,11 @@ def home():
 def add():
     title = request.form.get("title")
     new_todo = Todo(title=title, complete=False)
-    db.session.add(new_todo)
-    db.session.commit()
+    if len(title) <= 2:
+        print(f'Todo must have a name with minimum 2 signs')
+    else:
+        db.session.add(new_todo)
+        db.session.commit()
     return redirect(url_for("home"))
 
 

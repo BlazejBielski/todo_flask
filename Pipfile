@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 flask = "*"
+flask-bootstrap = "==3.3.7.1"
 
 [dev-packages]
 
