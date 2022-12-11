@@ -6,6 +6,12 @@ html {
   color: blue;
   margin: 20px 0;
 }
+.center {
+    text-align: center;
+}
+.button {
+    color-rendering: auto;
+}
 .grey {
     color: grey;
 }
